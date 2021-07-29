@@ -9,12 +9,16 @@ echo IP:
 tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || echo "Can't get NGROK tunnel, be sure NGROK_AUTH_TOKEN is correct in Settings> Secrets> Repository secret. Maybe your previous VM still running: https://dashboard.ngrok.com/status/tunnels " 
 echo User: Administrator
 echo Pass: Charan123
-curl -O https://raw.githubusercontent.com/charan2004153/RDP_Windows2019/main/Files/DisablePasswordComplexity.ps1 > out.txt 2>&1
+curl -O https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/DisablePasswordComplexity.ps1 > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/FastConfigVPS_v5.1.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\npp.7.9.4.Installer.x64.exe" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/npp.7.9.4.Installer.x64.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Everything.exe" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/Everything.exe > out.txt 2>&1
-curl -o "C:\Users\Public\Desktop\Everything.exe" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/psiphon3.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\BANDIZIP-SETUP.exe" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/BANDIZIP-SETUP.exe > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\psiphon.exe" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/psiphon3.exe > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\3.msd" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/3.msd > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\gm_setup.exe" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/gm_setup.exe > out.txt 2>&1
+curl -o "C:\Users\Public\Desktop\Geust.lnk" https://raw.githubusercontent.com/imadesa/RDP_Windows2019-main/main/Files/Geust.lnk > out.txt 2>&1
+
 
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './DisablePasswordComplexity.ps1'" > out.txt 2>&1
 diskperf -Y >nul
